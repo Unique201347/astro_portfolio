@@ -1,2 +1,11 @@
 /// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+interface ImportMetaEnv {
+  readonly HOST: string
+  readonly SUPABASE_URL: string
+  readonly SUPABASE_ANON_KEY: string
+  readonly WEBMENTION_IO_TOKEN: string
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}

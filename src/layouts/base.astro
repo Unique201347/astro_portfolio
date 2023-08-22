@@ -1,0 +1,24 @@
+---
+import '../styles/main.scss'
+import BaseHead, { Props as BaseHeadProps } from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+export interface Props extends BaseHeadProps {}
+
+const { title, description, permalink, canonicalUrl, ograph } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <BaseHead {title} {description} {permalink} {canonicalUrl} {ograph} />
+  <script src="../scripts/favicon.ts"></script>
+
+  <body>
+    <Header />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

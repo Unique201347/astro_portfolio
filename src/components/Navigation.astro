@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro'
+---
+
+<nav class="flex w-full md:w-auto">
+  <ul class="flex gap-10 w-full whitespace-nowrap list-none">
+    <li class="flex m-0 lowercase">
+      <a href="/" aria-label="Return home"
+        ><Icon icon="BBB" style="width:1.25rem;" class="icon text-gray-500 fill-gray-500 hover:fill-gray-100 hover:text-gray-100 active:fill-gray-100 active:text-gray-100 transition duration-300 ease-in-out" /></a
+      >
+    </li>
+    <li class="flex m-0 lowercase">
+      <a href="/blog/" class="text-gray-400 hover:text-gray-50 transition duration-300 ease-in-out">Blog</a>
+    </li>
+    <li class="flex m-0 lowercase">
+      <a href="/speaking/" class="text-gray-400 hover:text-gray-50 transition duration-300 ease-in-out">Speaking</a>
+    </li>
+  </ul>
+</nav>
