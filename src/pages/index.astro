@@ -1,11 +1,10 @@
 ---
 import BaseLayout from "../layouts/base.astro";
 import Intro from "../components/Intro.astro";
-import Proof from "../components/Proof.astro";
-import Goals from "../components/Goals.astro";
+import Languages from "../components/Languages.astro";
+import Skills from "../components/Skills.astro";
 import BrainDump from "../components/BrainDump.astro";
 import FeaturedPosts from "../components/FeaturedPosts.astro";
-import SkillCard from "../components/Cards/SkillCard.astro";
 
 const title = "Nabin Dhami";
 const description =
@@ -17,8 +16,8 @@ const ograph =
 
 <BaseLayout {title} {description} {permalink} {ograph}>
   <Intro />
-  <Goals />
+  <Skills />
   <BrainDump />
-  <Proof />
+  <Languages />
   <FeaturedPosts />
 </BaseLayout>
