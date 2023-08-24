@@ -8,6 +8,7 @@ import Condensed from '../../components/Cards/Condensed.astro'
 let blogPosts = await getCollection('blog')
 
 blogPosts = blogPosts.sort(
+  // @ts-ignore
   (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
 )
 
@@ -24,15 +25,12 @@ while (posts.length > 0) {
   })
 }
 
-const title = "Michael's Blog Posts"
+const title = "Nabin Dhami | Blog"
 const description =
-  'A listing of blog posts by Michael Jolley, the bald bearded builder.'
-const permalink = `https://${import.meta.env.HOST}/blog/`
-const ograph =
-  'https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto,f_auto/v1688515828/website-assets/ograph/neon_computers_hu9vou.png'
+  'These are the blogs, i have created while learninig.'
 ---
 
-<BaseLayout {title} {description} {permalink} {ograph}>
+<BaseLayout {title} {description}>
   <section class="wrapper">
     {
       groups.map((group, index) => {

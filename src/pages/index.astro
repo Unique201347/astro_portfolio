@@ -1,20 +1,17 @@
 ---
 import BaseLayout from "../layouts/base.astro";
 import Intro from "../components/Intro.astro";
-import Languages from "../components/Languages.astro";
 import Skills from "../components/Skills.astro";
+import Languages from "../components/Languages.astro";
 import BrainDump from "../components/BrainDump.astro";
 import FeaturedPosts from "../components/FeaturedPosts.astro";
 
 const title = "Nabin Dhami";
 const description =
   "The home of Nabin Dhami. Crafting unique learning experiences for myself and other organizations to enable developers to write better software.";
-const permalink = `https://${import.meta.env.HOST}/`;
-const ograph =
-  "https://res.cloudinary.com/dk3rdh3yo/image/upload/c_scale,w_auto,f_auto/v1688517887/website-assets/ograph/neon_gadgets_gtjbeh.png";
 ---
 
-<BaseLayout {title} {description} {permalink} {ograph}>
+<BaseLayout {title} {description} >
   <Intro />
   <Skills />
   <BrainDump />

@@ -1,65 +1,27 @@
 ---
 import Icon from "./Icon.astro";
+
+const languages = [
+  "pop",
+  "oop",
+  "dotnet",
+  "java",
+  "javascript",
+  "typescript",
+  "go",
+  "python",
+];
 ---
 
-<section
-  class="py-4 bg-gradient-to-b from-[rgba(255,255,255,0.05)] to-[rgba(255,255,255,0.03)] border-t border-b border-grayBorder"
->
+
+<section class="py-4 bg-gradient-to-b from-[rgba(255,255,255,0.05)] to-[rgba(255,255,255,0.03)] border-t border-b border-grayBorder">
   <div class="w-11/12 mx-auto">
     <ul class="flex items-center justify-center gap-10 flex-wrap py-6">
-
-      <li class="">
-        <Icon
-          icon="pop"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-
-      <li class="">
-        <Icon
-          icon="oop"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-      <li class="">
-        <Icon
-          icon="dotnet"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-
-      <li class="">
-        <Icon
-          icon="java"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-
-      <li class="">
-        <Icon
-          icon="javascript"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-      <li class="">
-        <Icon
-          icon="typescript"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-      <li>
-        <Icon
-          icon="go"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-      <li class="">
-        <Icon
-          icon="python"
-          class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3"
-        />
-      </li>
-
+      {languages.map((icon) => (
+        <li>
+          <Icon icon={icon} class="h-16 w-16 aspect-square border border-grayBorder rounded-lg p-3" />
+        </li>
+      ))}
     </ul>
   </div>
 </section>

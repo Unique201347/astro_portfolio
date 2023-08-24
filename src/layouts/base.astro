@@ -6,12 +6,12 @@ import Footer from '../components/Footer.astro'
 
 export interface Props extends BaseHeadProps {}
 
-const { title, description, permalink, canonicalUrl, ograph } = Astro.props
+const { title, description, } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <BaseHead {title} {description} {permalink} {canonicalUrl} {ograph} />
+  <BaseHead {title} {description}  />
   <script src="../scripts/favicon.ts"></script>
 
   <body>
